@@ -9,3 +9,18 @@ background-size: cover;
 width: 100%;
 height: auto;
 }
+
+.p1{
+margin-top: 280px;
+font-family: 'Inter', sans-serif;   
+font-style: bold;
+font-size:75px;
+color: white;
+}
+
+.p2{
+color: white;
+font-size: 14px;
+font-family: 'Inter', sans-serif;
+margin-bottom: 550px;
+}
