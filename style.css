@@ -6,4 +6,6 @@ background-repeat: no-repeat; /* Resmi tekrarlama */
 background-size: cover; /* resmi ekranı kaplayacak hale getir. */
 background-attachment: fixed;
 background-size: cover;
+width: 100%;
+height: auto;
 }
