@@ -30,3 +30,11 @@ font-size: 18px;
 color: #434966;
 font-family: 'Inter', sans-serif;
 }
+
+.form{
+    background-color: white;
+    margin-top: 94px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
