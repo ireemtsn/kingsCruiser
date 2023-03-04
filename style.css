@@ -38,3 +38,9 @@ font-family: 'Inter', sans-serif;
     padding-right: 10px;
     border-radius: 10px;
 }
+
+.Subtotal{
+ font-size: 14px;
+ font-weight: bold;
+ margin-top: 15px;
+}
