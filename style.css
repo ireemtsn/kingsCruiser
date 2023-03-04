@@ -34,9 +34,10 @@ padding-top: 15px;
 
 .form{
     background-color: white;
-    margin-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding-left: 8px;
+    padding-right: 8px;
     border-radius: 10px;
     width: 486px;
 }
@@ -55,8 +56,24 @@ margin-top: -15px;
 
 .line{
  margin-top: -20px;
+ margin-left: 6px;
 }
 
 .button1{
     background-color: #E33741;
+    width: 450px;
+    height: 42px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    border: #E33741;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+   
+}
+
+.total{
+font-size: 14px;
+font-weight: bold;
+
 }
