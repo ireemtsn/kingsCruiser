@@ -5,9 +5,9 @@ background-position: center center; /* Görseli Ortala */
 background-repeat: no-repeat; /* Resmi tekrarlama */
 background-size: cover; /* resmi ekranı kaplayacak hale getir. */
 background-attachment: fixed;
-width: 100%;
+/*width: 100%;
 height: auto;
-overflow: hidden;
+overflow: hidden;*/
 }
 
 .p1{
@@ -29,14 +29,16 @@ margin-bottom: 550px;
 font-size: 18px;
 color: #434966;
 font-family: 'Inter', sans-serif;
+padding-top: 15px;
 }
 
 .form{
     background-color: white;
-    margin-top: 94px;
+    margin-top: 50px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
+    width: 486px;
 }
 
 .Subtotal{
@@ -46,5 +48,15 @@ font-family: 'Inter', sans-serif;
 }
 
 .Charge{
-    
+ font-size: 14px;
+ font-weight: bold;
+margin-top: -15px;
+}
+
+.line{
+ margin-top: -20px;
+}
+
+.button1{
+    background-color: #E33741;
 }
