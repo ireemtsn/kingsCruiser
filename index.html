@@ -7,6 +7,7 @@
         <title>Kings Cruiser</title>
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <script> src="https://code.jquery.com/jquery-3.6.0.min.js%22%3E"</script>
     </head>
 
     <body>
@@ -28,7 +29,7 @@
                         <p class="p3">Book some Ocean Time with Kings cruiser</p>
                         <div class="form-group">
                             <label style="font-size: 14px;" for="exampleFormControlSelect1">Cruising from:</label>
-                            <select style="background-color: #f3f5ff;" class="form-control" id="exampleFormControlSelect1">
+                            <select style="background-color: #f3f5ff;" class="form-control" id="select1">
                                 <option>America</option>
                                 <option>Almanya</option>
                                 <option>Belçika</option>
@@ -37,13 +38,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label style="font-size: 14px; margin-top: 10px; padding-top: -50px;" for="exampleFormControlSelect1">Cruising to:</label>
-                            <select style="background-color: #f3f5ff;" class="form-control" id="exampleFormControlSelect1">
+                            <label style="font-size: 14px; margin-top: 10px; padding-top: -50px;" for="exampleFormControlSelect2">Cruising to:</label>
+                            <select style="background-color: #f3f5ff;" class="form-control" id="select2">
                                 <option>Alaska</option>
                                 <option>Florida</option>
                                 <option>Hawaii</option>
                                 <option>Kaliforniya</option>
-                                <option>Teksas</option>
+                                <option>Rusya</option>
                             </select>
                         </div>
 
@@ -61,37 +62,43 @@
                         <div class="row">
                             <div class="col-lg-8">
                                 <label style="margin-top: 10px; font-size: 14px;" for="exampleFormControlSelect1">VIP ($7000) :</label>
-                                <input id="vıp" style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
+                                <input value="0" id="vip" style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/add.png" value="submit" width="30px" />
+                                <button class="round-button" type="button"  id="vipBiletArti"  style="margin-top: 40px;" width="30px">  <span class="plus-icon">+</span>
+                                </button>
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/delete.png" value="submit" width="30px" />
+                                <span class="round-button" type="button"  id="vipBiletEksi"  style="margin-top: 40px;" width="30px"> 
+                                     -</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8">
                                 <label style="margin-top: 5px; font-size: 14px;" for="exampleFormControlSelect1">First Class ($1500) :</label>
-                                <input style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
+                                <input value="0" id="firstClass" style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/add.png" value="submit" width="30px" />
+                                <button class="round-button" type="button"  id="firstClassBiletArti"  style="margin-top: 40px;" width="30px">  <span class="plus-icon">+</span>
+                                </button>
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/delete.png" value="submit" width="30px" />
+                                <span class="round-button" type="button"  id="firstClassBiletEksi"  style="margin-top: 40px;" width="30px"> 
+                                     -</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-8">
                                 <label style="margin-top: 5px; font-size: 14px;" for="exampleFormControlSelect1">Economy ($1000) :</label>
-                                <input style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
+                                <input value="0" id="Economy" style="background-color: #f3f5ff;" type="number" class="form-control" placeholder="" />
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/add.png" value="submit" width="30px" />
+                                <button class="round-button" type="button"  id="EconomyBiletArti"  style="margin-top: 40px;" width="30px">  <span class="plus-icon">+</span>
+                                </button>
                             </div>
                             <div class="col-lg-2">
-                                <input style="margin-top: 40px;" type="image" src="image/delete.png" value="submit" width="30px" />
+                                <span class="round-button" type="button"  id="EconomyBiletEksi"  style="margin-top: 40px;" width="30px"> 
+                                     -</span>
                             </div>
                         </div>
 
@@ -124,9 +131,10 @@
             </div>
         </div>
 
-        <script src="script.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
