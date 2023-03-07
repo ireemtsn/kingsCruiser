@@ -107,7 +107,36 @@ $(document).ready(function() {
       
   
 
-  
+                    $(document).ready(function() {
+                        $('#datetime-local, #datetime-local2').change(function() {
+                          var value1 = $('#datetime-local').val();
+                          var value2 = $('#datetime-local2').val();
+                          var value1= new Date($(this).val()); 
+                          var value2= new Date($(this).val()); 
+                          var now = new Date(); 
+                          if (value1 === value2) {
+                            alert('The selected values must be different!');
+                          }
+                          else if(value1 <= now || value2 <= now)
+                          alert('bugünü ve geçmiş tarihi seçemezsiniz');
+                        });
+                        
+
+                        
+                      });
+
+
+                     /* $(document).ready(function() {
+                        $('#date').on('change', function() {
+                          var selectedDate = new Date($(this).val()); // Seçilen tarihi al
+                          var now = new Date(); // Şimdiki zamanı al
+                          if (selectedDate < now) { // Eğer seçilen tarih şimdiki tarihten önceyse
+                            alert('Lütfen geçerli bir tarih seçin.'); // Uyarı mesajını göster
+                            $(this).val(''); // Seçilen tarihi temizle
+                          }
+                        });
+                      });*/
+                    
 
 
 
