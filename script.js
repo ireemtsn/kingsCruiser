@@ -174,6 +174,31 @@ $(document).ready(function () {
 });
 
 
+/*$(document).ready(function() {
+   $('#booknow').click(function() {
+    // burada hesaplanan bilet tutarını alın
+ 
+     // Yeni sayfaya geçiş yapın
+     window.location.href = 'book.html';
+ 
+     // Yeni sayfadaki "total" id'li p etiketine bilet tutarını yazdırın
+     $('#totalBiletYazdirma').text('$' +10);
+   });
+ });*/
+
+ $(document).ready(function() {
+   // localStorage'dan hesaplanan bilet tutarını alın
+   var totalBiletTutari = localStorage.getItem('#totalsonuc');
+ 
+   // "total" id'li p etiketine bilet tutarını yazdırın
+   $('#totalBiletYazdirma').text('Toplam Bilet Tutarı: ' + totalBiletTutari);
+ 
+   // localStorage'dan hesaplanan bilet tutarını silin
+  localStorage.removeItem('totalBiletYazdirma');
+ });
+ 
+ 
+
 /* $(document).ready(function() {
    $('#date').on('change', function() {
      var selectedDate = new Date($(this).val()); // Seçilen tarihi al

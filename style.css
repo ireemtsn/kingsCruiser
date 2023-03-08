@@ -32,6 +32,11 @@ font-family: 'Inter', sans-serif;
 padding-top: 15px;
 }
 
+.p4{
+margin-left: 30px;
+
+}
+
 .form{
     background-color: white;
     margin-top: 80px;
@@ -92,11 +97,15 @@ margin-top: 5px;
 }
 
 .p8{
-margin-top: 40px;
+margin-top: 25px;
 }
 
 .p11{
 margin-top: -20px;
+}
+
+.p12{
+margin-left: 30px;
 }
 
 .form2{
@@ -125,11 +134,11 @@ margin-left: 70px;
 
 .button2{
     background-color: #E33741;
-    width: 450px;
+    width: 432px;
     height: 42px;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 8px;
+    margin-left: 20px;
     border: #E33741;
     border-radius: 5px;
     color: white;
@@ -187,3 +196,23 @@ margin-top: 15px;
     margin-top: -6px;
 
 }
+
+.logo{
+margin-left: -140px;
+margin-top: 40px;
+}
+.logo2{
+margin-left: -143px;
+}
+
+.biletCiktilari1{
+   margin-left: 30px;
+}
+.biletCiktilari2{
+    margin-left: 30px;
+ }
+
+.line2{
+margin-left: 30px;
+}
+
