@@ -169,3 +169,14 @@ margin-left: 70px;
     color: #fff;
   }*/
   
+  #sonuc{
+font-weight: bold;
+text-align: right;
+margin-top: 15px;
+  }
+
+  #indirimlisonuc{
+    font-weight: bold;
+    text-align: right;
+    margin-top: -15px;
+  }
