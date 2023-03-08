@@ -180,3 +180,10 @@ margin-top: 15px;
     text-align: right;
     margin-top: -15px;
   }
+
+#totalsonuc{
+    font-weight: bold;
+    text-align: right;
+    margin-top: -6px;
+
+}
