@@ -224,7 +224,6 @@ margin-left: 30px;
 
 #totalBiletYazdirma{
   font-weight: bold;
-  margin-top: -30px;
-  margin-left: 150px;
+ text-align: left;
  
 }

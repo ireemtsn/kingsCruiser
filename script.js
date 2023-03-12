@@ -27,9 +27,36 @@ $(document).ready(function () {
       if (value1 === value2) {
          alert('The selected values must be different!');
       }
+      localStorage.setItem("select1", value1);
+      localStorage.setItem("select2", value2);
    });
 });
 
+/*GİDİŞ VE DÖNÜŞ YERLERİNİN STORAGE İLE YAZILMASI*/
+
+$(document).ready(function () {
+   // Get the saved values from localStorage
+   var value1 = localStorage.getItem('select1');
+   var value2 = localStorage.getItem('select2');
+   if (value1 === value2) {
+     alert('Aynı yere bilet kesilemez!');
+     // Reset the select elements
+     $('#select1').val('');
+     $('#select2').val('');
+     // Clear the saved values from localStorage
+     localStorage.removeItem('select1');
+     localStorage.removeItem('select2');
+     // Update the displayed values
+     $('#cruisingFrom').text('');
+     $('#cruisingTo').text('');
+   }
+   else {
+     // Set the text of the elements to the saved values
+     $('#cruisingFrom').text(value1);
+     $('#cruisingTo').text(value2);
+   }
+ });
+ 
 
 /*BİLET SAYISINI ARTTIRMA İŞLEMİ BUTON CLİCK KULLANILDI!*/
 
@@ -66,7 +93,6 @@ $(document).ready(function () {
    let vipBiletSayisi = $('#firstClass');
    $("#firstClassBiletArti").click(function (e) {
       e.preventDefault()
-
 
       vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
    });
@@ -250,8 +276,9 @@ $(document).ready(function () {
    localStorage.removeItem('totalsonuc');
    });
  
- 
 
+   
+   
 /* $(document).ready(function() {
    $('#date').on('change', function() {
      var selectedDate = new Date($(this).val()); // Seçilen tarihi al
