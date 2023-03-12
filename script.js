@@ -115,24 +115,38 @@ $(document).ready(function() {
 })
 
 /*BUGÜN VE GEÇMİŞ TARİHİ SEÇEMEZSİNİZ BÖLÜMÜ"*/
-
 $(document).ready(function() {
    $('#datetime-local, #datetime-local2').change(function() {
        var value1 = $('#datetime-local').val();
        var value2 = $('#datetime-local2').val();
-       var value1 = new Date($(this).val());
-       var value2 = new Date($(this).val());
+       var date1 = new Date(value1);
+       var date2 = new Date(value2);
        var now = new Date();
-       if (value1 === value2) {
+       if (date1.getTime() === date2.getTime()) {
            alert('The selected values must be different!');
-       } else if (value1 <= now || value2 <= now)
+       } else if (date1 <= now || date2 <= now) {
            alert('bugünü ve geçmiş tarihi seçemezsiniz');
+       } else {
+           localStorage.setItem('departureDate', value1);
+           localStorage.setItem('returnDate', value2);
+       }
+       updateDisplayedValues();
    });
 
+
+   function updateDisplayedValues() {
+       var departureDate = localStorage.getItem('departureDate');
+       var returnDate = localStorage.getItem('returnDate');
+   
+       if (departureDate !== null && returnDate !== null) {
+           $('#gidisTarihi').text(departureDate);
+           $('#donusTarihi').text(returnDate);
+       }
+   }
+         
+   updateDisplayedValues();
 });
 
-
-/*BİLET TUTARLARININ HESAPLANMASI*/
 
 $(document).ready(function() {
    // Input elemanlarının değerlerini aldığımız değişkenleri tanımlıyoruz.
@@ -168,7 +182,7 @@ $(document).ready(function() {
 });
 
 
-/*STORAGE İLE TOTAL SONUCU YAZDIRMA*/
+
 
 $(document).ready(function() {
    // localStorage'dan hesaplanan bilet tutarını alın
