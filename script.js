@@ -132,7 +132,7 @@ $(document).ready(function() {
 });
 
 
-
+/*BİLET TUTARLARININ HESAPLANMASI*/
 
 $(document).ready(function() {
    // Input elemanlarının değerlerini aldığımız değişkenleri tanımlıyoruz.
@@ -168,7 +168,7 @@ $(document).ready(function() {
 });
 
 
-
+/*STORAGE İLE TOTAL SONUCU YAZDIRMA*/
 
 $(document).ready(function() {
    // localStorage'dan hesaplanan bilet tutarını alın
