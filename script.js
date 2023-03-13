@@ -88,18 +88,17 @@ $(document).ready(function() {
  });
  
 
-$(document).ready(function() {
-   let vipBiletSayisi = $('#Economy');
-   $("#EconomyBiletEksi").click(function(e) {
-       e.preventDefault()
-
-
-       vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) - 1);
-   });
-
-
-})
-
+ $(document).ready(function() {
+    let vipBiletSayisi = $('#Economy');
+    $("#EconomyBiletEksi").click(function(e) {
+        e.preventDefault();
+        let currentValue = parseInt(vipBiletSayisi.val());
+        if (currentValue > 0) {
+            vipBiletSayisi.val(currentValue - 1);
+        }
+    });
+ });
+ 
 $(document).ready(function() {
    let vipBiletSayisi = $('#Economy');
    $("#EconomyBiletArti").click(function(e) {
