@@ -144,42 +144,42 @@ $(document).ready(function() {
    updateDisplayedValues();
 });
 
-
 $(document).ready(function() {
-   // Input elemanlarının değerlerini aldığımız değişkenleri tanımlıyoruz.
-   var number1 = $('#vip');
-   var number2 = $('#firstClass');
-   var number3 = $('#Economy');
-
-   // Hedef elementini tanımlıyoruz.
-   var result = $('#sonuc');
-   var indirim = $('#indirimlisonuc');
-   var total = $('#totalsonuc');
-
-   // Input elemanlarının değerlerinde değişiklik olduğunda sonucu hesaplayıp yazdıran bir olay işleyicisi ekliyoruz.
-   number1.add(number2).add(number3).on('input', function() {
-       // Input elemanlarının değerlerini alıyoruz.
-       var val1 = number1.val() ? parseFloat(number1.val()) : 0;
-       var val2 = number2.val() ? parseFloat(number2.val()) : 0;
-       var val3 = number3.val() ? parseFloat(number3.val()) : 0;
-
-       // Değerleri çarpıp sonucu hesaplıyoruz.
-       var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
-       var indirimlisonuc = ((resultValue * (10) / 100));
-       var totalsonuc = parseFloat((resultValue) - (indirimlisonuc));
-
-       // Sonucu hedef elementine yazdırıyoruz.
-       result.text('$ ' + resultValue);
-       indirim.text('$ ' + indirimlisonuc);
-       total.text('$ ' + totalsonuc);
-
-       // Toplam bilet tutarını localStorage'a kaydediyoruz.
-       localStorage.setItem("totalsonuc", totalsonuc);
-      
+    // Input elemanlarının değerlerini aldığımız değişkenleri tanımlıyoruz.
+    var number1 = $('#vip');
+    var number2 = $('#firstClass');
+    var number3 = $('#Economy');
+ 
+    // Hedef elementini tanımlıyoruz.
+    var result = $('#sonuc');
+    var indirim = $('#indirimlisonuc');
+    var total = $('#totalsonuc');
+ 
+    // Input elemanlarının değerlerinde değişiklik olduğunda sonucu hesaplayıp yazdıran bir olay işleyicisi ekliyoruz.
+    number1.add(number2).add(number3).on('input', function() {
+        // Input elemanlarının değerlerini alıyoruz.
+        var val1 = number1.val() ? parseFloat(number1.val()) : 0;
+        var val2 = number2.val() ? parseFloat(number2.val()) : 0;
+        var val3 = number3.val() ? parseFloat(number3.val()) : 0;
+ 
+        // Değerleri çarpıp sonucu hesaplıyoruz.
+        var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
+        var indirimlisonuc = ((resultValue * (10) / 100));
+        var totalsonuc = parseFloat((resultValue) - (indirimlisonuc));
+ 
+        // Sonucu hedef elementine yazdırıyoruz.
+        result.text('$ ' + resultValue);
+        indirim.text('$ ' + indirimlisonuc);
+        total.text('$ ' + totalsonuc);
+ 
+        // Toplam bilet tutarını localStorage'a kaydediyoruz.
+        localStorage.setItem("totalsonuc", totalsonuc);
+        localStorage.setItem("vipBiletYazdir", val1*7000);
        
-   });
-});
-
+        
+    });
+ });
+ 
 /*BİLET SONUCU YAZDIRMA */ 
 
 $(document).ready(function() {
@@ -192,6 +192,19 @@ $(document).ready(function() {
    // localStorage'dan hesaplanan bilet tutarını silin
    localStorage.removeItem('totalsonuc');
 });
+
+$(document).ready(function() {
+   // Get the value of "vipBiletYazdir" from localStorage
+var vipBiletYazdirValue = localStorage.getItem("vipBiletYazdir");
+
+// Display the value on the page
+document.getElementById("vipBiletYazdir").textContent = "$ " + vipBiletYazdirValue;
+
+ });
+ 
+
+
+
 
 
 
