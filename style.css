@@ -101,9 +101,6 @@ margin-top: 5px;
 margin-top: 25px;
 }
 
-.p11{
-margin-top: -20px;
-}
 
 .p12{
 margin-left: 10px;
@@ -226,5 +223,8 @@ margin-left: 20px;
 #totalBiletYazdirma{
   font-weight: bold;
  text-align: left;
- 
+}
+
+#vipBiletCikti{
+  background-color: #E33741;
 }
