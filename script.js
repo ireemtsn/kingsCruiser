@@ -165,7 +165,7 @@ $(document).ready(function() {
 
         // Değerleri çarpıp sonucu hesaplıyoruz.
         var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
-        var indirimlisonuc = ((resultValue * (10) / 100));
+        var indirimlisonuc =(val1 * 7000* 0.1) + (val2 * 1500*0.1) + (val3 * 1000 * 0.1);
         var totalsonuc = parseFloat((resultValue) + (indirimlisonuc));
 
         // Sonucu hedef elementine yazdırıyoruz.
@@ -175,9 +175,9 @@ $(document).ready(function() {
 
         // Toplam bilet tutarını localStorage'a kaydediyoruz.
         localStorage.setItem("totalsonuc", totalsonuc);
-        localStorage.setItem("vipBiletYazdir", val1 * 7000);
-        localStorage.setItem("FristBiletYazdir", val2 * 1500);
-        localStorage.setItem("EconomyBiletYazdir", val2 * 1000);
+        localStorage.setItem("vipBiletYazdir", ((7000 * 0.1)+7000)*val1);
+        localStorage.setItem("FristBiletYazdir", (( 1500 * 0.1)+1500)* val2);
+        localStorage.setItem("EconomyBiletYazdir", (( 1000 * 0.1)+1000)* val3);
     });
 
     // VIP bilet sayısını arttıran butonun olay işleyicisi
@@ -187,7 +187,7 @@ $(document).ready(function() {
     });
 
     // VIP bilet sayısını azaltan butonun olay işleyicisi
-   // VIP bilet sayısını azaltan butonun olay işleyicisi
+
     $('#vipBiletEksi').on('click', function() {
         var currentValue = parseInt(number1.val());
         if (currentValue > 0) {
