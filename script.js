@@ -175,6 +175,7 @@ $(document).ready(function() {
         // Toplam bilet tutarını localStorage'a kaydediyoruz.
         localStorage.setItem("totalsonuc", totalsonuc);
         localStorage.setItem("vipBiletYazdir", val1 * 7000);
+        localStorage.setItem("FristBiletYazdir", val2 * 1500);
 
 
     });
@@ -199,5 +200,13 @@ $(document).ready(function() {
 
     // Display the value on the page
     document.getElementById("vipBiletYazdir").textContent = "$ " + vipBiletYazdirValue;
+
+});
+$(document).ready(function() {
+    // Get the value of "vipBiletYazdir" from localStorage
+    var fristBiletYazdirValue = localStorage.getItem("FristBiletYazdir");
+
+    // Display the value on the page
+    document.getElementById("FristBiletYazdir").textContent = "$ " + fristBiletYazdirValue;
 
 });
