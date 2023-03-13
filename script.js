@@ -65,7 +65,6 @@ $(document).ready(function() {
  });
  
 
-
 $(document).ready(function() {
    let vipBiletSayisi = $('#firstClass');
    $("#firstClassBiletArti").click(function(e) {
@@ -78,16 +77,16 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-   let vipBiletSayisi = $('#firstClass');
-   $("#firstClassBiletEksi").click(function(e) {
-       e.preventDefault()
-
-
-       vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) - 1);
-   });
-
-
-})
+    let vipBiletSayisi = $('#firstClass');
+    $("#firstClassBiletEksi").click(function(e) {
+        e.preventDefault();
+        let currentValue = parseInt(vipBiletSayisi.val());
+        if (currentValue > 0) {
+            vipBiletSayisi.val(currentValue - 1);
+        }
+    });
+ });
+ 
 
 $(document).ready(function() {
    let vipBiletSayisi = $('#Economy');
