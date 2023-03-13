@@ -166,7 +166,7 @@ $(document).ready(function() {
         // Değerleri çarpıp sonucu hesaplıyoruz.
         var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
         var indirimlisonuc = ((resultValue * (10) / 100));
-        var totalsonuc = parseFloat((resultValue) - (indirimlisonuc));
+        var totalsonuc = parseFloat((resultValue) + (indirimlisonuc));
 
         // Sonucu hedef elementine yazdırıyoruz.
         result.text('$ ' + resultValue);
@@ -187,6 +187,7 @@ $(document).ready(function() {
     });
 
     // VIP bilet sayısını azaltan butonun olay işleyicisi
+   // VIP bilet sayısını azaltan butonun olay işleyicisi
     $('#vipBiletEksi').on('click', function() {
         var currentValue = parseInt(number1.val());
         if (currentValue > 0) {
