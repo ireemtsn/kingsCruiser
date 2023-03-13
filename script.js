@@ -54,17 +54,16 @@ $(document).ready(function() {
 /*BİLET SAYISINI AZALTMA İŞLEMİ BUTON CLİCK KULLANILDI!*/
 
 $(document).ready(function() {
-   let vipBiletSayisi = $('#vip');
-   $("#vipBiletEksi").click(function(e) {
-       e.preventDefault()
-
-
-       vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) - 1);
-
-   });
-
-
-});
+    let vipBiletSayisi = $('#vip');
+    $("#vipBiletEksi").click(function(e) {
+        e.preventDefault();
+        let currentValue = parseInt(vipBiletSayisi.val());
+        if (currentValue > 0) {
+            vipBiletSayisi.val(currentValue - 1);
+        }
+    });
+ });
+ 
 
 
 $(document).ready(function() {
@@ -178,11 +177,12 @@ $(document).ready(function() {
 
        // Toplam bilet tutarını localStorage'a kaydediyoruz.
        localStorage.setItem("totalsonuc", totalsonuc);
+      
+       
    });
 });
 
-
-
+/*BİLET SONUCU YAZDIRMA */ 
 
 $(document).ready(function() {
    // localStorage'dan hesaplanan bilet tutarını alın
@@ -194,3 +194,7 @@ $(document).ready(function() {
    // localStorage'dan hesaplanan bilet tutarını silin
    localStorage.removeItem('totalsonuc');
 });
+
+
+
+
