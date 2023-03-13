@@ -73,7 +73,6 @@ $(document).ready(function() {
         vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
     });
 
-
 });
 
 $(document).ready(function() {
@@ -177,10 +176,55 @@ $(document).ready(function() {
         localStorage.setItem("vipBiletYazdir", val1 * 7000);
         localStorage.setItem("FristBiletYazdir", val2 * 1500);
         localStorage.setItem("EconomyBiletYazdir", val2 * 1000);
-
-
     });
+
+    // VIP bilet sayısını arttıran butonun olay işleyicisi
+    $('#vipBiletArti').on('click', function() {
+        var currentValue = parseInt(number1.val());
+        number1.val(currentValue + 1).trigger('input');
+    });
+
+    // VIP bilet sayısını azaltan butonun olay işleyicisi
+    $('#vipBiletEksi').on('click', function() {
+        var currentValue = parseInt(number1.val());
+        if (currentValue > 0) {
+            number1.val(currentValue - 1).trigger('input');
+        }
+    });
+
+    $('#firstClassBiletArti').on('click', function() {
+        var currentValue = parseInt(number2.val());
+        number2.val(currentValue + 1).trigger('input');
+    });
+
+    // VIP bilet sayısını azaltan butonun olay işleyicisi
+    $('#firstClassBiletEksi').on('click', function() {
+        var currentValue = parseInt(number2.val());
+        if (currentValue > 0) {
+            number2.val(currentValue - 1).trigger('input');
+        }
+    });
+
+    $('#EconomyBiletArti').on('click', function() {
+        var currentValue = parseInt(number3.val());
+        number3.val(currentValue + 1).trigger('input');
+    });
+
+    // VIP bilet sayısını azaltan butonun olay işleyicisi
+    $('#EconomyBiletEksi').on('click', function() {
+        var currentValue = parseInt(number3.val());
+        if (currentValue > 0) {
+            number3.val(currentValue - 1).trigger('input');
+        }
+    });
+     // First Class bilet sayısını arttıran butonun olay işleyicisi.
 });
+
+    // First Class bilet sayısını arttıran butonun olay işleyicisi
+    
+    // First Class bilet sayısını azaltan butonun olay işleyicisi
+    
+
 
 /*BİLET SONUCU YAZDIRMA */
 
