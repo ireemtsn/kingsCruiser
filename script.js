@@ -176,6 +176,7 @@ $(document).ready(function() {
         localStorage.setItem("totalsonuc", totalsonuc);
         localStorage.setItem("vipBiletYazdir", val1 * 7000);
         localStorage.setItem("FristBiletYazdir", val2 * 1500);
+        localStorage.setItem("EconomyBiletYazdir", val2 * 1000);
 
 
     });
@@ -208,5 +209,14 @@ $(document).ready(function() {
 
     // Display the value on the page
     document.getElementById("FristBiletYazdir").textContent = "$ " + fristBiletYazdirValue;
+
+});
+
+$(document).ready(function() {
+    // Get the value of "vipBiletYazdir" from localStorage
+    var economyBiletYazdirValue = localStorage.getItem("EconomyBiletYazdir");
+
+    // Display the value on the page
+    document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
 });
