@@ -18,7 +18,7 @@ $(document).ready(function() {
     var value1 = localStorage.getItem('select1');
     var value2 = localStorage.getItem('select2');
     if (value1 === value2) {
-        alert('Aynı yere bilet kesilemez!');
+        
         // Reset the select elements
         $('#select1').val('');
         $('#select2').val('');
@@ -121,7 +121,9 @@ $(document).ready(function() {
         if (date1.getTime() === date2.getTime()) {
             alert('The selected values must be different!');
         } else if (date1 <= now || date2 <= now) {
-            alert('bugünü ve geçmiş tarihi seçemezsiniz');
+            alert('Bugünü ve geçmiş tarihi seçemezsiniz');
+        } else if (date2 <= date1) {
+            alert('Dönüş tarihi, gidiş tarihinden önce olamaz!');
         } else {
             localStorage.setItem('departureDate', value1);
             localStorage.setItem('returnDate', value2);
