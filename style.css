@@ -207,13 +207,21 @@ margin-left: 70px;
     background-color: #E33741;
     width: 432px;
     height: 42px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
+ 
     border: #E33741;
     border-radius: 5px;
     color: white;
     font-weight: bold;   
+}
+
+/* Küçük ekranlar için stil */
+@media (max-width: 480px) {
+  .button2 {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .round-button {
@@ -298,7 +306,7 @@ font-weight: bold;
   align-items: center;
   background-color: #fff;
   padding: 20px;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding-top: 50px;
   margin-top: 96px;
