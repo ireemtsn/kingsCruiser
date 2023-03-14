@@ -5,11 +5,24 @@ $(document).ready(function() {
         var value2 = $('#select2').val();
         if (value1 === value2) {
             alert('The selected values must be different!');
+            // Reset the select elements
+            $('#select1').val('');
+            $('#select2').val('');
+            // Clear the saved values from localStorage
+            localStorage.removeItem('select1');
+            localStorage.removeItem('select2');
+            // Update the displayed values
+            $('#cruisingFrom').text('');
+            $('#cruisingTo').text('');
+        } else {
+            localStorage.setItem("select1", value1);
+            localStorage.setItem("select2", value2);
+            $('#cruisingFrom').text(value1);
+            $('#cruisingTo').text(value2);
         }
-        localStorage.setItem("select1", value1);
-        localStorage.setItem("select2", value2);
     });
 });
+
 
 /*GİDİŞ VE DÖNÜŞ YERLERİNİN STORAGE İLE YAZILMASI*/
 
@@ -266,4 +279,4 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-});
+});  js
