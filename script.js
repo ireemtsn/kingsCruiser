@@ -133,17 +133,22 @@ $(document).ready(function() {
         var now = new Date();
         if (date1.getTime() === date2.getTime()) {
             alert('The selected values must be different!');
+            $('#datetime-local').val('');
+            $('#datetime-local2').val('');
         } else if (date1 <= now || date2 <= now) {
             alert('Bugünü ve geçmiş tarihi seçemezsiniz');
+            $('#datetime-local').val('');
+            $('#datetime-local2').val('');
         } else if (date2 <= date1) {
             alert('Dönüş tarihi, gidiş tarihinden önce olamaz!');
+            $('#datetime-local').val('');
+            $('#datetime-local2').val('');
         } else {
             localStorage.setItem('departureDate', value1);
             localStorage.setItem('returnDate', value2);
         }
         updateDisplayedValues();
     });
-
 
     function updateDisplayedValues() {
         var departureDate = localStorage.getItem('departureDate');
@@ -157,6 +162,7 @@ $(document).ready(function() {
 
     updateDisplayedValues();
 });
+
 
 $(document).ready(function() {
     // Input elemanlarının değerlerini aldığımız değişkenleri tanımlıyoruz.
