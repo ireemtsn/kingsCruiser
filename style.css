@@ -201,6 +201,13 @@ font-family: 'Inter', sans-serif;
 padding-top: 10px;
 }
 
+.h6{
+  text-align: center;
+  font-size: 13px;
+  margin-top: -30px;
+ padding-bottom: 20px;
+}
+
 
 .button2{
     background-color: #E33741;
