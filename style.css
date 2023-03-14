@@ -65,13 +65,23 @@ padding-left: 10px;
 padding-right: 50px;
 font-size: 13px;
 color:  #434966;
-;
+}
 
+
+.cruiserimg{
+  margin-top: 5px;
+  background: none;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  box-shadow: none;
 }
 
 
 #vipBiletYazdir{
-  margin-left: calc(10% + 36%);
+  margin-left: calc(10% + 34.7%);
   font-family: 'Inter', sans-serif;
   margin-top: 40px;
   font-size: 13px;
@@ -180,14 +190,6 @@ margin-top: 25px;
 
 
 
-
-.form2{
-    background-color: white;
-    border-radius: 10px;
-    width: 486px;
-
-}
-
 .h3{
 color:#434966;
 text-align: center;
@@ -199,9 +201,6 @@ font-family: 'Inter', sans-serif;
 padding-top: 10px;
 }
 
-.cruiser{
-margin-left: 70px;
-}
 
 .button2{
     background-color: #E33741;
