@@ -33,10 +33,86 @@ padding-top: 15px;
 }
 
 .p4{
-margin-left: 5px;
-font-size: 15px;
+font-size: 14px;
+font-family: 'Inter', sans-serif;
+color: black;
+}
+
+
+.p7{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  margin-left: 8px;
+  }
+
+.p12{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  }
+
+.p6{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  }
+
+
+
+.cruise-info{
+padding-left: 10px;
+padding-right: 50px;
+font-size: 13px;
+color:  #434966;
+;
 
 }
+
+
+#vipBiletYazdir{
+  margin-left: calc(10% + 36%);
+  font-family: 'Inter', sans-serif;
+  margin-top: 40px;
+  font-size: 13px;
+  color:  #434966;
+}
+
+.vipText{
+  font-size: 14px;
+  margin-top: 40px;
+  color: black;
+}
+
+.fristText{
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  margin-top: 5px;
+}
+
+#FristBiletYazdir{
+  color: #4D4D4D;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-left: calc(10% + 26%);
+  font-family: 'Inter', sans-serif;
+}
+
+.economyText{
+font-size: 14px;
+color: rgb(0, 0, 0);
+margin-top: 5px;
+}
+
+#EconomyBiletYazdir{
+ color: #4D4D4D;
+ font-size: 13px;
+ margin-left: calc(10% + 27%);
+ font-family: 'Inter', sans-serif;
+ margin-top: 5px;
+
+}
+
 
 .form{
     background-color: white;
@@ -65,6 +141,7 @@ margin-left: 5px;
 .line{
  margin-top: -20px;
  margin-left: 6px;
+
 }
 
 .button1{
@@ -102,28 +179,24 @@ margin-top: 25px;
 }
 
 
-.p12{
-margin-left: 10px;
-}
+
 
 .form2{
     background-color: white;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    padding-left: 8px;
-    padding-right: 8px;
     border-radius: 10px;
     width: 486px;
-    margin-left: 550px;
 
 }
 
 .h3{
 color:#434966;
+text-align: center;
+padding-bottom: 30px;
 font-size: 48px;
 font-weight: bold;
 text-align: center;
 font-family: 'Inter', sans-serif;
+padding-top: 10px;
 }
 
 .cruiser{
@@ -203,25 +276,43 @@ margin-top: 40px;
 margin-left: -143px;
 }
 
-.biletCiktilari1{
-   margin-left: 20px;
-}
-.biletCiktilari2{
-    margin-left: 20px;
- }
 
-.line2{
-margin-left: 20px;
-}
 
 #totalYazisi{
   font-weight: bold;
-  margin-left: 20px;
+  margin-left: 5px;
   font-size: 18px;
 }
 
 #totalBiletYazdirma{
-  font-weight: bold;
+font-weight: bold;
  text-align: left;
+ margin-left: calc(20% + 20px);
+}
+
+
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-top: 96px;
+
+}
+
+
+
+.form-wrapper img {
+  max-width: 70%;
+  height: auto;
+  border: 1px solid black;
+  width: 250px;
+  margin-left: -11px;
+  
 }
 

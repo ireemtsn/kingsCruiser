@@ -10,24 +10,93 @@
       <script> src="https://code.jquery.com/jquery-3.6.0.min.js%22%3E"</script>
    </head>
    <body>
-      <div class="logo">
-         <img src="image/logoüst.png" alt="">
-      </div>
-      <div class="logo2">
-         <img src="image/logoalt.png" alt="">
-      </div>
+
+
+      <div class="form-wrapper">
+         <form>
+           <h3 class="h3">Your ticket</h3>
+           <div class="row">
+             <div class="col-xs-2">
+               <p class="p4">Cruising From:</p>
+             </div>
+             <p id="cruisingFrom" class="cruise-info"></p>
+             <div class="col-xs-2">
+               <p class="p6">Cruising to:</p>
+             </div>
+             <p id="cruisingTo" class="cruise-info" ></p>
+           </div>
+
+           <div class="row">
+            <div class="col-xs-2">
+               <p class="p12">Departure:</p>
+            </div>
+            <p id="gidisTarihi" class="cruise-info"></p>
+            <div class="col-xs-2">
+               <p class="p7">Return:</p>
+            </div>
+            <p id="donusTarihi" class="cruise-info"></p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">
+               <p class="vipText">VIP:</p>
+            </div>
+            <p id="vipBiletYazdir"></p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">
+               <p class="fristText">Frist class:</p>
+            </div>
+            <p id="FristBiletYazdir">$</p>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-2">
+               <p class="economyText">Economy:</p>
+            </div>
+            <p id="EconomyBiletYazdir">$</p>
+          </div>
+          
+          <div>
+            <img src="image/Line 2.png" alt="">
+          </div>
+          
+          
+          <div class="row">
+            <div class="col-xs-2">
+               <div id="totalYazisi">
+                 <p>Total</p> 
+               </div>
+            </div>
+            <p id="totalBiletYazdirma">$</p>
+          </div>
+
+          
+         
+           </div>
+         </form>
+       </div>
+       
      
-      <form class="form2">
+    <!---  <form class="form2">
          <h3 class="h3">Your ticket</h3>
          <div class="container">
             <div class="row">
-               <div class="col-lg-6">
+               <div class="col-lg-3">
                   <p class="p4">Cruising From:</p>
-                  <p  id="cruisingFrom"></p>
                </div>
-               <div class="col-lg-6">
+                  <div class="col-lg-3">
+                     <p id="cruisingFrom"></p>
+                  </div>
+             
+               
+               <div class="col-lg-3">
                   <p class="p6">Cruising to:</p>
-                  <p  id="cruisingTo"></p>
+                  <div class="col-lg-3">
+                     <p  id="cruisingTo"></p>
+                  </div>
+                  
                </div>
             </div>
             <div class="row">
@@ -87,11 +156,12 @@
          <div class="cruiser">
             <img src="image/Kings Cruiser.png" alt="">
          </div>
-      </form>
+      </form>-->
+   
    
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="script.js"></script>
    </body>
-</html>   book html
+</html>   
