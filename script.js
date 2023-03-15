@@ -161,6 +161,19 @@ $(document).ready(function() {
         updateDisplayedValues();
     });
 
+    $('#booknow').click(function(e) {
+        e.preventDefault(); // prevent default form submit action
+        var value1 = $('#datetime-local').val();
+        var value2 = $('#datetime-local2').val();
+        if (value1 && value2) { // check if both values are set
+            window.location.href = 'book.html'; // redirect to booknow page
+        } else {
+            alert('Zorunlu alanları doldurunuz.Gidiş ve dönüş tarihi seçmediniz!');
+            window.location.href = 'index.html';
+        }
+    });
+    
+
     function updateDisplayedValues() {
         var departureDate = localStorage.getItem('departureDate');
         var returnDate = localStorage.getItem('returnDate');
@@ -297,4 +310,3 @@ $(document).ready(function() {
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
 }); 
-
