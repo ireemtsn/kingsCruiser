@@ -21,6 +21,17 @@ $(document).ready(function() {
             $('#cruisingTo').text(value2);
         }
     });
+
+    $('#booknow').click(function(e) {
+        e.preventDefault(); // prevent default form submit action
+        var value1 = $('#select1').val();
+        var value2 = $('#select2').val();
+        if (value1 && value2) { // check if both values are set
+            window.location.href = 'book.html'; // redirect to booknow page
+        } else {
+            alert('Zorunlu alanları doldurunuz.Gidiş ve dönüş yeri seçmediniz!');
+        }
+    });
 });
 
 
