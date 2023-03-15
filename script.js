@@ -228,6 +228,21 @@ $(document).ready(function() {
     });
 
 
+    //ZORUNLU BİLET SEÇME ALANI
+    $('#booknow').click(function(e) {
+        e.preventDefault(); // prevent default form submit action
+        var val1 = $('#vip').val();
+        var val2 = $('#firstClass').val();
+        var val3 = $('#Economy').val();
+        if (val1 == 0 && val2 == 0 && val3 == 0) {
+            alert('En az bir bilet seçmeniz gerekiyor!');
+            window.location.href = 'index.html';
+        } else {
+            window.location.href = 'book.html';
+        }
+    });
+
+
 
     // VIP bilet sayısını arttıran butonun olay işleyicisi
     $('#vipBiletArti').on('click', function() {
@@ -269,6 +284,10 @@ $(document).ready(function() {
             number3.val(currentValue - 1).trigger('input');
         }
     });
+
+   
+  
+    
      // First Class bilet sayısını arttıran butonun olay işleyicisi.
 });
 
