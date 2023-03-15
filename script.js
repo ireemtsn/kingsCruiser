@@ -25,20 +25,18 @@ $(document).ready(function() {
             $('#cruisingTo').text(value2);
         }
     });
-
-    //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
-
-    $('#booknow').click(function(e) {
-        e.preventDefault(); // prevent default form submit action
-        var value1 = $('#select1').val();
-        var value2 = $('#select2').val();
-        if (value1 && value2) { // check if both values are set
-            window.location.href = 'book.html'; // redirect to booknow page
-        } else {
-            alert('Zorunlu alanları doldurunuz.Gidiş ve dönüş yeri seçmediniz!');
-            window.location.href = 'index.html'; 
-        }
-    });
+   //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
+   $('#booknow').click(function(e) {
+    e.preventDefault(); // prevent default form submit action
+    var value1 = $('#select1').val();
+    var value2 = $('#select2').val();
+    if (value1 == 0 || value2== 0) {
+        alert('En az bir bilet seçmeniz gerekiyor!');
+        window.location.href = 'index.html';
+    } else {
+        window.location.href = 'book.html'; 
+    }
+});
 });
 
 
@@ -67,13 +65,14 @@ $(document).ready(function() {
 });
 
 
+
+
 /*BİLET SAYISINI ARTTIRMA İŞLEMİ BUTON CLİCK KULLANILDI!*/
 
 $(document).ready(function() {
     let vipBiletSayisi = $('#vip');
     $("#vipBiletArti").click(function(e) {
         e.preventDefault()
-
 
         vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
     });
@@ -134,12 +133,9 @@ $(document).ready(function() {
     $("#EconomyBiletArti").click(function(e) {
         e.preventDefault()
 
-
         vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
     });
-
-
-})
+});
 
 /*BUGÜN VE GEÇMİŞ TARİHİ SEÇEMEZSİNİZ BÖLÜMÜ"*/
 $(document).ready(function() {
@@ -276,6 +272,9 @@ $(document).ready(function() {
             number2.val(currentValue - 1).trigger('input');
         }
     });
+
+    var number3 = $('#number3');
+    number3.val(0);
 
     $('#EconomyBiletArti').on('click', function() {
         var currentValue = parseInt(number3.val());
