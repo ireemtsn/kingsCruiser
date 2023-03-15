@@ -36,6 +36,7 @@ $(document).ready(function() {
             window.location.href = 'book.html'; // redirect to booknow page
         } else {
             alert('Zorunlu alanları doldurunuz.Gidiş ve dönüş yeri seçmediniz!');
+            window.location.href = 'index.html'; 
         }
     });
 });
