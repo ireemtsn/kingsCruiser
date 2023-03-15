@@ -285,4 +285,5 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-});  js
+}); 
+
