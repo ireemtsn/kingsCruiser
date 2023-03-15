@@ -26,6 +26,8 @@ $(document).ready(function() {
         }
     });
 
+    //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
+
     $('#booknow').click(function(e) {
         e.preventDefault(); // prevent default form submit action
         var value1 = $('#select1').val();
@@ -165,6 +167,8 @@ $(document).ready(function() {
         updateDisplayedValues();
     });
 
+
+    //ZORUNLU TARİH SEÇME ALANI TAMAMLANDI
     $('#booknow').click(function(e) {
         e.preventDefault(); // prevent default form submit action
         var value1 = $('#datetime-local').val();
