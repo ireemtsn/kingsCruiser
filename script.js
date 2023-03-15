@@ -1,6 +1,10 @@
 /*GİDİŞ VE DÖNÜŞ AYNI YERE OLAMAZ! */
 $(document).ready(function() {
+    $('#select1').val('');
+    $('#select2').val('');
     $('#select1, #select2').change(function() {
+
+       
         var value1 = $('#select1').val();
         var value2 = $('#select2').val();
         if (value1 === value2) {
@@ -222,6 +226,8 @@ $(document).ready(function() {
         localStorage.setItem("FristBiletYazdir", (( 1500 * 0.1)+1500)* val2);
         localStorage.setItem("EconomyBiletYazdir", (( 1000 * 0.1)+1000)* val3);
     });
+
+
 
     // VIP bilet sayısını arttıran butonun olay işleyicisi
     $('#vipBiletArti').on('click', function() {
