@@ -279,6 +279,20 @@ margin-top: 15px;
     font-weight: bold;
     text-align: right;
     margin-top: -6px;
+}
+
+#chargeVatYazisi{
+ font-size: 14px;
+ font-weight: bold;
+ margin-top: -5px;
+ margin-left: 5px;
+}
+
+#chargeVat{
+  font-weight: bold;
+  text-align: right;
+  margin-left: 50px;
+  margin-top: -6px;
 
 }
 

@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#select2').val('');
     $('#select1, #select2').change(function() {
 
-       
+
         var value1 = $('#select1').val();
         var value2 = $('#select2').val();
         if (value1 === value2) {
@@ -25,18 +25,18 @@ $(document).ready(function() {
             $('#cruisingTo').text(value2);
         }
     });
-   //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
-   $('#booknow').click(function(e) {
-    e.preventDefault(); // prevent default form submit action
-    var value1 = $('#select1').val();
-    var value2 = $('#select2').val();
-    if (value1 == 0 || value2== 0) {
-        alert('En az bir bilet seçmeniz gerekiyor!');
-        window.location.href = 'index.html';
-    } else {
-        window.location.href = 'book.html'; 
-    }
-});
+    //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
+    $('#booknow').click(function(e) {
+        e.preventDefault(); // prevent default form submit action
+        var value1 = $('#select1').val();
+        var value2 = $('#select2').val();
+        if (value1 == 0 || value2 == 0) {
+            alert('En az bir bilet seçmeniz gerekiyor!');
+            window.location.href = 'index.html';
+        } else {
+            window.location.href = 'book.html';
+        }
+    });
 });
 
 
@@ -47,7 +47,7 @@ $(document).ready(function() {
     var value1 = localStorage.getItem('select1');
     var value2 = localStorage.getItem('select2');
     if (value1 === value2) {
-        
+
         // Reset the select elements
         $('#select1').val('');
         $('#select2').val('');
@@ -177,7 +177,7 @@ $(document).ready(function() {
             window.location.href = 'index.html';
         }
     });
-    
+
 
     function updateDisplayedValues() {
         var departureDate = localStorage.getItem('departureDate');
@@ -213,7 +213,7 @@ $(document).ready(function() {
 
         // Değerleri çarpıp sonucu hesaplıyoruz.
         var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
-        var indirimlisonuc =(val1 * 7000* 0.1) + (val2 * 1500*0.1) + (val3 * 1000 * 0.1);
+        var indirimlisonuc = (val1 * 7000 * 0.1) + (val2 * 1500 * 0.1) + (val3 * 1000 * 0.1);
         var totalsonuc = parseFloat((resultValue) + (indirimlisonuc));
 
         // Sonucu hedef elementine yazdırıyoruz.
@@ -223,9 +223,10 @@ $(document).ready(function() {
 
         // Toplam bilet tutarını localStorage'a kaydediyoruz.
         localStorage.setItem("totalsonuc", totalsonuc);
-        localStorage.setItem("vipBiletYazdir", ((7000 * 0.1)+7000)*val1);
-        localStorage.setItem("FristBiletYazdir", (( 1500 * 0.1)+1500)* val2);
-        localStorage.setItem("EconomyBiletYazdir", (( 1000 * 0.1)+1000)* val3);
+        localStorage.setItem("vipBiletYazdir", ((7000 * 0.1) + 7000) * val1);
+        localStorage.setItem("FristBiletYazdir", ((1500 * 0.1) + 1500) * val2);
+        localStorage.setItem("EconomyBiletYazdir", ((1000 * 0.1) + 1000) * val3);
+        localStorage.setItem("indirimlisonuc",indirimlisonuc);
     });
 
 
@@ -273,15 +274,12 @@ $(document).ready(function() {
         }
     });
 
-    var number3 = $('#number3');
-    number3.val(0);
 
     $('#EconomyBiletArti').on('click', function() {
         var currentValue = parseInt(number3.val());
         number3.val(currentValue + 1).trigger('input');
     });
 
-    // VIP bilet sayısını azaltan butonun olay işleyicisi
     $('#EconomyBiletEksi').on('click', function() {
         var currentValue = parseInt(number3.val());
         if (currentValue > 0) {
@@ -289,16 +287,13 @@ $(document).ready(function() {
         }
     });
 
+    // VIP bilet sayısını azaltan butonun olay işleyicisi
    
-  
-    
-     // First Class bilet sayısını arttıran butonun olay işleyicisi.
 });
 
-    // First Class bilet sayısını arttıran butonun olay işleyicisi
-    
-    // First Class bilet sayısını azaltan butonun olay işleyicisi
-    
+
+
+
 
 
 /*BİLET SONUCU YAZDIRMA */
@@ -313,6 +308,20 @@ $(document).ready(function() {
     // localStorage'dan hesaplanan bilet tutarını silin
     localStorage.removeItem('totalsonuc');
 });
+
+$(document).ready(function() {
+    // localStorage'dan hesaplanan bilet tutarını alın
+    var kdvBiletTutari = localStorage.getItem('indirimlisonuc');
+
+    // "total" id'li p etiketine bilet tutarını yazdırın
+    $('#chargeVat').text('$: ' + kdvBiletTutari);
+
+    // localStorage'dan hesaplanan bilet tutarını silin
+    localStorage.removeItem('indirimlisonuc');
+});
+
+
+
 
 $(document).ready(function() {
     // Get the value of "vipBiletYazdir" from localStorage
@@ -338,4 +347,4 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-}); 
+});
