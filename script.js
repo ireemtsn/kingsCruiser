@@ -249,7 +249,7 @@ $(document).ready(function() {
     // VIP bilet sayısını arttıran butonun olay işleyicisi
     $('#vipBiletArti').on('click', function() {
         var currentValue = parseInt(number1.val());
-        number1.val(currentValue + 1).trigger('input');
+        number1.val(currentValue + 0).trigger('input');
     });
 
     // VIP bilet sayısını azaltan butonun olay işleyicisi
@@ -257,42 +257,39 @@ $(document).ready(function() {
     $('#vipBiletEksi').on('click', function() {
         var currentValue = parseInt(number1.val());
         if (currentValue > 0) {
-            number1.val(currentValue - 1).trigger('input');
+            number1.val(currentValue - 0).trigger('input');
         }
     });
 
     $('#firstClassBiletArti').on('click', function() {
         var currentValue = parseInt(number2.val());
-        number2.val(currentValue + 1).trigger('input');
+        number2.val(currentValue + 0).trigger('input');
     });
 
     // VIP bilet sayısını azaltan butonun olay işleyicisi
     $('#firstClassBiletEksi').on('click', function() {
         var currentValue = parseInt(number2.val());
         if (currentValue > 0) {
-            number2.val(currentValue - 1).trigger('input');
+            number2.val(currentValue - 0).trigger('input');
         }
     });
 
 
     $('#EconomyBiletArti').on('click', function() {
         var currentValue = parseInt(number3.val());
-        number3.val(currentValue + 1).trigger('input');
+        number3.val(currentValue + 0).trigger('input');
     });
 
     $('#EconomyBiletEksi').on('click', function() {
         var currentValue = parseInt(number3.val());
         if (currentValue > 0) {
-            number3.val(currentValue - 1).trigger('input');
+           number3.val(currentValue -0).trigger('input');
         }
     });
 
     // VIP bilet sayısını azaltan butonun olay işleyicisi
    
 });
-
-
-
 
 
 
@@ -347,4 +344,4 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-});
+}); 
