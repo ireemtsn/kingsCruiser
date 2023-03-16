@@ -30,8 +30,8 @@ $(document).ready(function() {
         e.preventDefault(); // prevent default form submit action
         var value1 = $('#select1').val();
         var value2 = $('#select2').val();
-        if (value1 == 0 || value2 == 0) {
-            alert('En az bir bilet seçmeniz gerekiyor!');
+        if (value1 == null || value2 == null) {
+            alert('Gidiş ve dönüş yerlerini düzgün doldurunuz!');
             window.location.href = 'index.html';
         } else {
             window.location.href = 'book.html';
