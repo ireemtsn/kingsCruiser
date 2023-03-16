@@ -1,3 +1,28 @@
+
+$('#booknow').click(function(e) {
+    e.preventDefault(); // prevent default form submit action
+    var value1 = $('#select1').val();
+    var value2 = $('#select2').val();
+    var value3 = $('#datetime-local').val();
+    var value4 = $('#datetime-local2').val();
+    var val1 = $('#vip').val();
+    var val2 = $('#firstClass').val();
+    var val3 = $('#Economy').val();
+    
+    if (value1 == null || value2 == null) {
+        alert('Gidiş ve dönüş yerlerini eksiksiz doldurunuz!');
+        window.location.href = 'index.html';
+    } else if (!value3 || !value4) {
+        alert('Gidiş ve dönüş tarihlerini eksiksiz doldurunuz!');
+        window.location.href = 'index.html';
+    } else if (val1 == 0 && val2 == 0 && val3 == 0) {
+        alert('En az bir bilet seçmeniz gerekiyor!');
+        window.location.href = 'index.html';
+    } else {
+        window.location.href = 'book.html';
+    }
+});
+
 /*GİDİŞ VE DÖNÜŞ AYNI YERE OLAMAZ! */
 $(document).ready(function() {
     $('#select1').val('');
@@ -25,18 +50,7 @@ $(document).ready(function() {
             $('#cruisingTo').text(value2);
         }
     });
-    //ZORUNLU GİDİŞ VE DÖNÜŞ SEÇİMİ TAMAMLANDI
-    $('#booknow').click(function(e) {
-        e.preventDefault(); // prevent default form submit action
-        var value1 = $('#select1').val();
-        var value2 = $('#select2').val();
-        if (value1 == null || value2 == null) {
-            alert('Gidiş ve dönüş yerlerini düzgün doldurunuz!');
-            window.location.href = 'index.html';
-        } else {
-            window.location.href = 'book.html';
-        }
-    });
+
 });
 
 
@@ -165,19 +179,7 @@ $(document).ready(function() {
     });
 
 
-    //ZORUNLU TARİH SEÇME ALANI TAMAMLANDI
-    $('#booknow').click(function(e) {
-        e.preventDefault(); // prevent default form submit action
-        var value1 = $('#datetime-local').val();
-        var value2 = $('#datetime-local2').val();
-        if (value1 && value2) { // check if both values are set
-            window.location.href = 'book.html'; // redirect to booknow page
-        } else {
-            alert('Zorunlu alanları doldurunuz.Gidiş ve dönüş tarihi seçmediniz!');
-            window.location.href = 'index.html';
-        }
-    });
-
+   
 
     function updateDisplayedValues() {
         var departureDate = localStorage.getItem('departureDate');
@@ -229,20 +231,6 @@ $(document).ready(function() {
         localStorage.setItem("indirimlisonuc",indirimlisonuc);
     });
 
-
-    //ZORUNLU BİLET SEÇME ALANI
-    $('#booknow').click(function(e) {
-        e.preventDefault(); // prevent default form submit action
-        var val1 = $('#vip').val();
-        var val2 = $('#firstClass').val();
-        var val3 = $('#Economy').val();
-        if (val1 == 0 && val2 == 0 && val3 == 0) {
-            alert('En az bir bilet seçmeniz gerekiyor!');
-            window.location.href = 'index.html';
-        } else {
-            window.location.href = 'book.html';
-        }
-    });
 
 
 
@@ -344,4 +332,4 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-}); 
+});  
