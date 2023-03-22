@@ -81,24 +81,21 @@ $(document).ready(function() {
 
 
 
-/*BİLET SAYISINI ARTTIRMA İŞLEMİ BUTON CLİCK KULLANILDI!*/
-
 $(document).ready(function() {
     let vipBiletSayisi = $('#vip');
-    $("#vipBiletArti").click(function(e) {
-        e.preventDefault()
+    let firstClassBiletSayisi = $('#firstClass');
+    let economyBiletSayisi = $('#Economy');
+    const MAX_BILET = 50; // Maksimum bilet sayısı
 
-        vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
+    $("#vipBiletArti").click(function(e) {
+        e.preventDefault();
+        if (getTotalBilet() < MAX_BILET) {
+            vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
+        } else {
+            alert("Maksimum bilet sayısına ulaştınız!");
+        }
     });
 
-
-})
-
-
-/*BİLET SAYISINI AZALTMA İŞLEMİ BUTON CLİCK KULLANILDI!*/
-
-$(document).ready(function() {
-    let vipBiletSayisi = $('#vip');
     $("#vipBiletEksi").click(function(e) {
         e.preventDefault();
         let currentValue = parseInt(vipBiletSayisi.val());
@@ -106,50 +103,47 @@ $(document).ready(function() {
             vipBiletSayisi.val(currentValue - 1);
         }
     });
-});
 
-
-$(document).ready(function() {
-    let vipBiletSayisi = $('#firstClass');
     $("#firstClassBiletArti").click(function(e) {
-        e.preventDefault()
-
-        vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
+        e.preventDefault();
+        if (getTotalBilet() < MAX_BILET) {
+            firstClassBiletSayisi.val(parseInt(firstClassBiletSayisi.val()) + 1);
+        } else {
+            alert("Maksimum bilet sayısına ulaştınız!");
+        }
     });
 
-});
-
-$(document).ready(function() {
-    let vipBiletSayisi = $('#firstClass');
     $("#firstClassBiletEksi").click(function(e) {
         e.preventDefault();
-        let currentValue = parseInt(vipBiletSayisi.val());
+        let currentValue = parseInt(firstClassBiletSayisi.val());
         if (currentValue > 0) {
-            vipBiletSayisi.val(currentValue - 1);
+            firstClassBiletSayisi.val(currentValue - 1);
         }
     });
-});
 
+    $("#EconomyBiletArti").click(function(e) {
+        e.preventDefault();
+        if (getTotalBilet() < MAX_BILET) {
+            economyBiletSayisi.val(parseInt(economyBiletSayisi.val()) + 1);
+        } else {
+            alert("Maksimum bilet sayısına ulaştınız!");
+        }
+    });
 
-$(document).ready(function() {
-    let vipBiletSayisi = $('#Economy');
     $("#EconomyBiletEksi").click(function(e) {
         e.preventDefault();
-        let currentValue = parseInt(vipBiletSayisi.val());
+        let currentValue = parseInt(economyBiletSayisi.val());
         if (currentValue > 0) {
-            vipBiletSayisi.val(currentValue - 1);
+            economyBiletSayisi.val(currentValue - 1);
         }
     });
+
+    // Toplam bilet sayısını hesapla
+    function getTotalBilet() {
+        return parseInt(vipBiletSayisi.val()) + parseInt(firstClassBiletSayisi.val()) + parseInt(economyBiletSayisi.val());
+    }
 });
 
-$(document).ready(function() {
-    let vipBiletSayisi = $('#Economy');
-    $("#EconomyBiletArti").click(function(e) {
-        e.preventDefault()
-
-        vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
-    });
-});
 
 /*BUGÜN VE GEÇMİŞ TARİHİ SEÇEMEZSİNİZ BÖLÜMÜ"*/
 $(document).ready(function() {
