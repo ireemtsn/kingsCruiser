@@ -92,7 +92,7 @@ $(document).ready(function() {
         if (getTotalBilet() < MAX_BILET) {
             vipBiletSayisi.val(parseInt(vipBiletSayisi.val()) + 1);
         } else {
-            alert("Maksimum bilet sayısına ulaştınız!");
+            alert("You have reached the maximum number of tickets!");
         }
     });
 
