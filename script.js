@@ -109,7 +109,7 @@ $(document).ready(function() {
         if (getTotalBilet() < MAX_BILET) {
             firstClassBiletSayisi.val(parseInt(firstClassBiletSayisi.val()) + 1);
         } else {
-            alert("Maksimum bilet sayısına ulaştınız!");
+            alert("You have reached the maximum number of tickets!");
         }
     });
 
@@ -126,7 +126,7 @@ $(document).ready(function() {
         if (getTotalBilet() < MAX_BILET) {
             economyBiletSayisi.val(parseInt(economyBiletSayisi.val()) + 1);
         } else {
-            alert("Maksimum bilet sayısına ulaştınız!");
+            alert("You have reached the maximum number of tickets!");
         }
     });
 
