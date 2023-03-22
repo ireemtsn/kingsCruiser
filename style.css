@@ -334,3 +334,10 @@ body{
     border-radius: 10px;
   }
   
+  .round-button:hover {
+    cursor: pointer;
+  }
+  
+  .button1{
+    cursor: pointer;
+  }
