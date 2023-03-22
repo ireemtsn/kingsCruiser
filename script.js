@@ -10,13 +10,13 @@ $('#booknow').click(function(e) {
     var val3 = $('#Economy').val();
     
     if (value1 == null || value2 == null) {
-        alert('Gidiş ve dönüş yerlerini eksiksiz doldurunuz!');
+        alert('Fill in the departure and return places completely!');
         window.location.href = 'index.html';
     } else if (!value3 || !value4) {
-        alert('Gidiş ve dönüş tarihlerini eksiksiz doldurunuz!');
+        alert('Please fill in the departure and return dates completely!');
         window.location.href = 'index.html';
     } else if (val1 == 0 && val2 == 0 && val3 == 0) {
-        alert('En az bir bilet seçmeniz gerekiyor!');
+        alert('You need to choose at least one ticket!');
         window.location.href = 'index.html';
     } else {
         window.location.href = 'book.html';
@@ -164,11 +164,11 @@ $(document).ready(function() {
             $('#datetime-local').val('');
             $('#datetime-local2').val('');
         } else if (date1 <= now || date2 <= now) {
-            alert('Bugünü ve geçmiş tarihi seçemezsiniz');
+            alert('You cannot select todays date and past date');
             $('#datetime-local').val('');
             $('#datetime-local2').val('');
         } else if (date2 <= date1) {
-            alert('Dönüş tarihi, gidiş tarihinden önce olamaz!');
+            alert('The return date cannot be earlier than the departure date!');
             $('#datetime-local').val('');
             $('#datetime-local2').val('');
         } else {
