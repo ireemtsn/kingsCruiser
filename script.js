@@ -280,7 +280,7 @@ $(document).ready(function() {
     $('#EconomyBiletEksi').on('click', function() {
         var currentValue = parseInt(number3.val());
         if (currentValue > 0) {
-            number3.val(currentValue - 1).trigger('input');
+            number3.val(currentValue - 0).trigger('input');
         }
        
     });
