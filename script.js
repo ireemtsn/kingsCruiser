@@ -133,7 +133,7 @@ $(document).ready(function() {
         e.preventDefault();
         let currentValue = parseInt(economyBiletSayisi.val());
         if (currentValue > 0) {
-            economyBiletSayisi.val(currentValue - 0);
+            economyBiletSayisi.val(currentValue - 1);
         }
     });
 
@@ -280,7 +280,7 @@ $(document).ready(function() {
     $('#EconomyBiletEksi').on('click', function() {
         var currentValue = parseInt(number3.val());
         if (currentValue > 0) {
-            number3.val(currentValue - 0).trigger('input');
+            number3.val(currentValue - 1).trigger('input');
         }
        
     });
