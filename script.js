@@ -207,7 +207,6 @@ $(document).ready(function() {
         var val3 = number3.val() ? parseFloat(number3.val()) : 0;
 
         
-    
 
         // Değerleri çarpıp sonucu hesaplıyoruz.
         var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
@@ -256,6 +255,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number1.val(currentValue - 0).trigger('input');
         }
+        number1.val(0).trigger('input');
     });
 
     $('#firstClassBiletArti').on('click', function() {
@@ -269,6 +269,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number2.val(currentValue - 0).trigger('input');
         }
+        number1.val(0).trigger('input');
     });
 
 
@@ -282,6 +283,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number3.val(currentValue - 0).trigger('input');
         }
+        number1.val(0).trigger('input');
     });
     // VIP bilet sayısını azaltan butonun olay işleyicisi
 
