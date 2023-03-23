@@ -157,7 +157,7 @@ $(document).ready(function() {
             $('#datetime-local').val('');
             $('#datetime-local2').val('');
         } else if (date1 <= now || date2 <= now) {
-            alert('You cannot select todays date and past date');
+            alert('You cannot select todays date and past date!');
             $('#datetime-local').val('');
             $('#datetime-local2').val('');
         } else if (date2 <= date1) {
@@ -236,7 +236,6 @@ $(document).ready(function() {
         localStorage.setItem("EconomyBiletYazdir", ((1000 * 0.1) + 1000) * val3);
         localStorage.setItem("indirimlisonuc", indirimlisonuc);
         
-        
     });
 
 
@@ -269,7 +268,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number2.val(currentValue - 0).trigger('input');
         }
-        number1.val(0).trigger('input');
+        number2.val(0).trigger('input');
     });
 
 
@@ -283,7 +282,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number3.val(currentValue - 0).trigger('input');
         }
-        number1.val(0).trigger('input');
+        number3.val(0).trigger('input');
     });
     // VIP bilet sayısını azaltan butonun olay işleyicisi
 
