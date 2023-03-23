@@ -254,7 +254,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number1.val(currentValue - 0).trigger('input');
         }
-        number3.val(currentValue - 0).trigger('input');
+        number1.val(currentValue - 0).trigger('input');
        
     });
 
@@ -269,7 +269,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number2.val(currentValue - 0).trigger('input');
         }
-        number3.val(currentValue - 0).trigger('input');
+        number2.val(currentValue - 0).trigger('input');
         
     });
 
