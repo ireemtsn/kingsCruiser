@@ -1,4 +1,3 @@
-
 $('#booknow').click(function(e) {
     e.preventDefault(); // prevent default form submit action
     var value1 = $('#select1').val();
@@ -8,7 +7,7 @@ $('#booknow').click(function(e) {
     var val1 = $('#vip').val();
     var val2 = $('#firstClass').val();
     var val3 = $('#Economy').val();
-    
+
     if (value1 == null || value2 == null) {
         alert('Fill in the departure and return places completely!');
         window.location.href = 'index.html';
@@ -173,7 +172,7 @@ $(document).ready(function() {
     });
 
 
-   
+
 
     function updateDisplayedValues() {
         var departureDate = localStorage.getItem('departureDate');
@@ -207,22 +206,38 @@ $(document).ready(function() {
         var val2 = number2.val() ? parseFloat(number2.val()) : 0;
         var val3 = number3.val() ? parseFloat(number3.val()) : 0;
 
+        
+    
+
         // Değerleri çarpıp sonucu hesaplıyoruz.
         var resultValue = (val1 * 7000) + (val2 * 1500) + (val3 * 1000);
         var indirimlisonuc = (val1 * 7000 * 0.1) + (val2 * 1500 * 0.1) + (val3 * 1000 * 0.1);
         var totalsonuc = parseFloat((resultValue) + (indirimlisonuc));
 
+        
         // Sonucu hedef elementine yazdırıyoruz.
         result.text('$ ' + resultValue);
         indirim.text('$ ' + indirimlisonuc);
         total.text('$ ' + totalsonuc);
+
+
+        // ELLE GİRİLEN DEĞERDEKİ BİLET SAYISINI KPNTROL ETME 
+        var totalTickets = val1 + val2 + val3;
+
+        // Toplam bilet sayısı 50'yi geçerse uyarı veriyoruz ve işlemi durduruyoruz.
+        if (totalTickets > 50) {
+            alert("Max bilet sayısına ulaştınız!");
+            window.location.href = 'index.html';
+        }
 
         // Toplam bilet tutarını localStorage'a kaydediyoruz.
         localStorage.setItem("totalsonuc", totalsonuc);
         localStorage.setItem("vipBiletYazdir", ((7000 * 0.1) + 7000) * val1);
         localStorage.setItem("FristBiletYazdir", ((1500 * 0.1) + 1500) * val2);
         localStorage.setItem("EconomyBiletYazdir", ((1000 * 0.1) + 1000) * val3);
-        localStorage.setItem("indirimlisonuc",indirimlisonuc);
+        localStorage.setItem("indirimlisonuc", indirimlisonuc);
+        
+        
     });
 
 
@@ -265,12 +280,11 @@ $(document).ready(function() {
     $('#EconomyBiletEksi').on('click', function() {
         var currentValue = parseInt(number3.val());
         if (currentValue > 0) {
-           number3.val(currentValue -0).trigger('input');
+            number3.val(currentValue - 0).trigger('input');
         }
     });
-
     // VIP bilet sayısını azaltan butonun olay işleyicisi
-   
+
 });
 
 
@@ -326,4 +340,4 @@ $(document).ready(function() {
     // Display the value on the page
     document.getElementById("EconomyBiletYazdir").textContent = "$ " + economyBiletYazdirValue;
 
-});  
+});
