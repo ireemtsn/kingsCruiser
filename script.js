@@ -133,7 +133,7 @@ $(document).ready(function() {
         e.preventDefault();
         let currentValue = parseInt(economyBiletSayisi.val());
         if (currentValue > 0) {
-            economyBiletSayisi.val(currentValue - 1);
+            economyBiletSayisi.val(currentValue - 0);
         }
     });
 
@@ -254,7 +254,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number1.val(currentValue - 0).trigger('input');
         }
-        number1.val(0).trigger('input');
+       
     });
 
     $('#firstClassBiletArti').on('click', function() {
@@ -268,7 +268,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number2.val(currentValue - 0).trigger('input');
         }
-        number2.val(0).trigger('input');
+        
     });
 
 
@@ -282,7 +282,7 @@ $(document).ready(function() {
         if (currentValue > 0) {
             number3.val(currentValue - 0).trigger('input');
         }
-        number3.val(0).trigger('input');
+       
     });
     // VIP bilet sayısını azaltan butonun olay işleyicisi
 
